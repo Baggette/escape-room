@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
+using System.Runtime.Serialization.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace escape_room
 {
@@ -29,8 +35,8 @@ namespace escape_room
 
         public async Task<string> SendData(string url, Data data)
         {
-            //convert the data from the Data class into js
-            var jsonData = JsonSerializer.Serialize(data);
+            //convert the data from the Data class into json
+            var jsonData = System.Text.Json.JsonSerializer.Serialize(data);
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
             //actually send the request now and return the response back to where it was executed
@@ -41,6 +47,7 @@ namespace escape_room
                 //convert returned data to string
                 string json = await response.Content.ReadAsStringAsync();
                 //return the data back to where it was executed
+
                 return json;
             }
             else
