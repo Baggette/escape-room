@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace escape_room
+namespace escape_room.Challenges
 {
     public class challenge_1
     {
         public void Challenge1()
         {
-            var ai = new Ai();
-            string challenge = @"**Challenge:**
+            var ai = new api.Ai();
+            string challenge = @"**Challenge 1:**
 
 Write a program in a language of your choice that takes user input in minutes and converts it into hours and minutes. For example, if the user inputs 180, the program should output ""3 hours and 0 minutes"".
 
@@ -25,9 +25,20 @@ Write a program in a language of your choice that takes user input in minutes an
 
             Console.WriteLine(challenge + "\n6. Enter the code in a text file and drag the file into this window");
             string path = Console.ReadLine();
+            //when the user drags a file into the console window it adds some extra quotations for some reason so this just removes that 
             string code = File.ReadAllText(@path.Substring(1, path.Length - 2).TrimEnd('"'));
 
-            Console.WriteLine(ai.Prompt("Given the challenge: " + challenge + " Compare it to this code: \n " + code + " \n determine if this code would be functional and meets the parameters of " + challenge + " \n If you see that this code is working then tell me 'working' if it does not work tell me 'not working'"));
+            string workingOrNot = ai.Prompt("Given the challenge: " + challenge + " Compare it to this code: \n " + code + " \n determine if this code would be functional and meets the parameters of " + challenge + " \n If you see that this code is working then tell me 'working' if it does not work tell me 'not working'");
+
+            if (workingOrNot.ToLower() == "working")
+            {
+
+            }
+            else 
+            {
+                Program failed = new Program();
+                failed.Failure("Challenge 1");
+            }
         }
     }
 }

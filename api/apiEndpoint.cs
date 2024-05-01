@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace escape_room
+namespace escape_room.api
 {
     //this class stores the stuff 
     public class Data

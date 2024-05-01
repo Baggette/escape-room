@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace escape_room
+namespace escape_room.api
 {
     public class Ai
     {
