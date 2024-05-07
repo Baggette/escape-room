@@ -1,18 +1,36 @@
 ﻿
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace escape_room;
 
 public class Program
 {
     public static IDictionary<string, DateTime> time = new Dictionary<string, DateTime>() { {"time", DateTime.Now} };
 
+    public string hours;
+    public string minutes;
+    public string seconds;
+    public string milliseconds;
+
     public void Failure(string challenge)
-    { 
+    {
         DateTime end = DateTime.Now;
         TimeSpan elapsedTime = end - time["time"];
         //clear the console
-        Console.Clear();
+        //Console.Clear();
 
-        Console.WriteLine("You failed to escape. You made it up to " + challenge + " and you spent " + elapsedTime.TotalHours + "H " + elapsedTime.TotalMinutes + "M " + elapsedTime.TotalSeconds + "S ");
+        //remove the decimal values from the time values and format them for use later
+        hours = elapsedTime.TotalHours.ToString();
+        hours = hours.Substring(0, hours.IndexOf(".") + 1).TrimEnd('.');
+        minutes = elapsedTime.TotalMinutes.ToString();
+        minutes = minutes.Substring(0, minutes.IndexOf(".") + 1).TrimEnd('.');
+        seconds = elapsedTime.TotalSeconds.ToString();
+        seconds = seconds.Substring(0, seconds.IndexOf(".") + 1).TrimEnd('.');
+        milliseconds = elapsedTime.TotalMilliseconds.ToString();
+        milliseconds = milliseconds.Substring(0, milliseconds.IndexOf(".") + 1).TrimEnd('.');
+
+        //print to console how long the user spent trying
+        Console.WriteLine("You failed to escape. You made it up to " + challenge + " and you spent " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds and " + milliseconds + " Milliseconds inside of the escape room");
     }
     public static void Main(string[] args)
     {
