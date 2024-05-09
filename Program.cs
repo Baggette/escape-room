@@ -17,7 +17,7 @@ public class Program
         DateTime end = DateTime.Now;
         TimeSpan elapsedTime = end - time["time"];
         //clear the console
-        //Console.Clear();
+        Console.Clear();
 
         //remove the decimal values from the time values and format them for use later
         hours = elapsedTime.TotalHours.ToString();
@@ -34,9 +34,9 @@ public class Program
     }
     public static void Main(string[] args)
     {
-        var ai = new api.Ai();
+        //var ai = new api.Ai();
         //Console.WriteLine("temp just beacuse don't want to waste api requests");
-        Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
+        //Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
         Console.WriteLine();
         //wait for the user to press enter before continuing
         Console.ReadKey();
@@ -45,8 +45,8 @@ public class Program
         DateTime start = DateTime.Now;
         time["time"] = start;
 
-        var challenge = new Challenges.challenge_1();
-        challenge.Challenge1();
+        var challenge = new Challenges.Challenge_3();
+        challenge.Challenge3();
         //print to console what the output was
 
     }

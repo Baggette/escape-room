@@ -9,7 +9,7 @@ namespace escape_room.api
             try
             {
                 //not 100% sure if this is needed, could probably just use a method instead of a constructor
-                var postApi = new postApi();
+                var postApi = new Api();
                 //store the data in a constructor (at least thats what I think its called I dunno its late)
                 string secret_key = File.ReadAllText(@"..\..\..\..\..\..\api.txt");
 
@@ -18,7 +18,7 @@ namespace escape_room.api
                 //api endpoint
                 var url = "https://something-lfu0.onrender.com";
                 //execute the thing that does the post request
-                var task = postApi.SendData(url, data);
+                var task = postApi.getPrompt(url, data);
                 //set the data in a variable
                 var response = task.Result;
 

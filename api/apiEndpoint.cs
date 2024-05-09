@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace escape_room.api
 {
@@ -11,18 +12,18 @@ namespace escape_room.api
     }
 
     //create a new class where the post requests will be executed from
-    public class postApi
+    public class Api
     {
 
         //from what I can gather this just creates a new instance of HttpClient in preparation for doing the request
         private readonly HttpClient _client;
 
-        public postApi()
+        public Api()
         {
             _client = new HttpClient();
         }
 
-        public async Task<string> SendData(string url, Data data)
+        public async Task<string> getPrompt(string url, Data data)
         {
             //convert the data from the Data class into json
             var jsonData = System.Text.Json.JsonSerializer.Serialize(data);
@@ -42,6 +43,20 @@ namespace escape_room.api
             else
             {
                 //temp probably if there was nothing
+                return "nothing";
+            }
+        }
+
+        public async Task<string> trivia()
+        {
+            HttpResponseMessage response = await _client.GetAsync("https://opentdb.com/api.php?amount=1&category=18&difficulty=hard");
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
+                return json;
+            }
+            else
+            {
                 return "nothing";
             }
         }

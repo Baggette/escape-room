@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "G:\\comp sci 12\\Escape Room\\escape-room\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|g:\\comp sci 12\\escape room\\escape-room\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|g:\\comp sci 12\\escape room\\escape-room\\challenges\\challenge_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|solutionrelative:challenges\\challenge_3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|G:\\comp sci 12\\Escape Room\\escape-room\\api\\apiendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|solutionrelative:api\\apiendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|G:\\comp sci 12\\Escape Room\\escape-room\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|g:\\comp sci 12\\escape room\\escape-room\\challenges\\challenge_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|solutionrelative:challenges\\challenge_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|g:\\comp sci 12\\escape room\\escape-room\\api\\prompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|G:\\comp sci 12\\Escape Room\\escape-room\\api\\prompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|solutionrelative:api\\prompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|g:\\comp sci 12\\escape room\\escape-room\\api\\apiendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{831365DA-9632-4E82-B06C-42FD8B13A1F1}|escape-room.csproj|solutionrelative:api\\apiendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Challenge_1.cs",
-              "DocumentMoniker": "G:\\comp sci 12\\Escape Room\\escape-room\\Challenges\\Challenge_1.cs",
-              "RelativeDocumentMoniker": "Challenges\\Challenge_1.cs",
-              "ToolTip": "G:\\comp sci 12\\Escape Room\\escape-room\\Challenges\\Challenge_1.cs",
-              "RelativeToolTip": "Challenges\\Challenge_1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAMAAAA",
+              "DocumentIndex": 0,
+              "Title": "Challenge_3.cs",
+              "DocumentMoniker": "G:\\comp sci 12\\Escape Room\\escape-room\\Challenges\\Challenge_3.cs",
+              "RelativeDocumentMoniker": "Challenges\\Challenge_3.cs",
+              "ToolTip": "G:\\comp sci 12\\Escape Room\\escape-room\\Challenges\\Challenge_3.cs",
+              "RelativeToolTip": "Challenges\\Challenge_3.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T15:07:47.286Z",
+              "WhenOpened": "2024-05-09T14:37:29.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Prompt.cs",
               "DocumentMoniker": "G:\\comp sci 12\\Escape Room\\escape-room\\api\\Prompt.cs",
               "RelativeDocumentMoniker": "api\\Prompt.cs",
               "ToolTip": "G:\\comp sci 12\\Escape Room\\escape-room\\api\\Prompt.cs",
               "RelativeToolTip": "api\\Prompt.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T15:07:44.158Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "apiEndpoint.cs",
               "DocumentMoniker": "G:\\comp sci 12\\Escape Room\\escape-room\\api\\apiEndpoint.cs",
               "RelativeDocumentMoniker": "api\\apiEndpoint.cs",
               "ToolTip": "G:\\comp sci 12\\Escape Room\\escape-room\\api\\apiEndpoint.cs",
               "RelativeToolTip": "api\\apiEndpoint.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAmwA4AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T15:07:42.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\comp sci 12\\Escape Room\\escape-room\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "G:\\comp sci 12\\Escape Room\\escape-room\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAADIAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-25T14:49:59.971Z",
               "EditorCaption": ""
