@@ -49,7 +49,7 @@ namespace escape_room.api
 
         public async Task<string> trivia()
         {
-            HttpResponseMessage response = await _client.GetAsync("https://opentdb.com/api.php?amount=1&category=18&difficulty=hard");
+            using HttpResponseMessage response = await _client.GetAsync("https://opentdb.com/api.php?amount=1&category=18&difficulty=hard&type=multiple");
             if (response.IsSuccessStatusCode)
             {
                 string json = await response.Content.ReadAsStringAsync();

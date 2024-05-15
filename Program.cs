@@ -39,7 +39,7 @@ public class Program
         //Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
         Console.WriteLine();
         //wait for the user to press enter before continuing
-        Console.ReadKey();
+        //Console.ReadKey();
 
         //start the timer
         DateTime start = DateTime.Now;
