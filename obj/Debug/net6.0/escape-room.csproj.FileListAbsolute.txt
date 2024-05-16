@@ -13,3 +13,33 @@ G:\comp sci 12\Escape Room\escape-room\obj\Debug\net6.0\refint\escape-room.dll
 G:\comp sci 12\Escape Room\escape-room\obj\Debug\net6.0\escape-room.pdb
 G:\comp sci 12\Escape Room\escape-room\obj\Debug\net6.0\escape-room.genruntimeconfig.cache
 G:\comp sci 12\Escape Room\escape-room\obj\Debug\net6.0\ref\escape-room.dll
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.GeneratedMSBuildEditorConfig.editorconfig
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.AssemblyInfoInputs.cache
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.AssemblyInfo.cs
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.csproj.CoreCompileInputs.cache
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.sourcelink.json
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.dll
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\refint\escape-room.dll
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.pdb
+F:\Csharp_stuff\escape-room\bin\Debug\net6.0\escape-room.exe
+F:\Csharp_stuff\escape-room\bin\Debug\net6.0\escape-room.deps.json
+F:\Csharp_stuff\escape-room\bin\Debug\net6.0\escape-room.runtimeconfig.json
+F:\Csharp_stuff\escape-room\bin\Debug\net6.0\escape-room.dll
+F:\Csharp_stuff\escape-room\bin\Debug\net6.0\escape-room.pdb
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\escape-room.genruntimeconfig.cache
+F:\Csharp_stuff\escape-room\obj\Debug\net6.0\ref\escape-room.dll
+G:\Projects\escape-room\bin\Debug\net6.0\escape-room.exe
+G:\Projects\escape-room\bin\Debug\net6.0\escape-room.deps.json
+G:\Projects\escape-room\bin\Debug\net6.0\escape-room.runtimeconfig.json
+G:\Projects\escape-room\bin\Debug\net6.0\escape-room.dll
+G:\Projects\escape-room\bin\Debug\net6.0\escape-room.pdb
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.GeneratedMSBuildEditorConfig.editorconfig
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.AssemblyInfoInputs.cache
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.AssemblyInfo.cs
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.csproj.CoreCompileInputs.cache
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.sourcelink.json
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.dll
+G:\Projects\escape-room\obj\Debug\net6.0\refint\escape-room.dll
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.pdb
+G:\Projects\escape-room\obj\Debug\net6.0\escape-room.genruntimeconfig.cache
+G:\Projects\escape-room\obj\Debug\net6.0\ref\escape-room.dll

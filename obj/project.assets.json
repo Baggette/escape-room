@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "D:\\Users\\rishis.TVH0139791\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "D:\\Users\\omariog\\.nuget\\packages\\": {},
+    "D:\\Programs\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj",
+      "projectUniqueName": "G:\\Projects\\escape-room\\escape-room.csproj",
       "projectName": "escape-room",
-      "projectPath": "G:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj",
-      "packagesPath": "D:\\Users\\rishis.TVH0139791\\.nuget\\packages\\",
-      "outputPath": "G:\\comp sci 12\\Escape Room\\escape-room\\obj\\",
+      "projectPath": "G:\\Projects\\escape-room\\escape-room.csproj",
+      "packagesPath": "D:\\Users\\omariog\\.nuget\\packages\\",
+      "outputPath": "G:\\Projects\\escape-room\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Programs\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "D:\\Users\\rishis.TVH0139791\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\Users\\omariog\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
