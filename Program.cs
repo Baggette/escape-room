@@ -1,37 +1,86 @@
 ﻿
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Nodes;
-using System.Text.Json.Serialization;
-using System.Collections.Generic;
-using System.IO;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace escape_room;
 
-    internal class Program
+public class Program
+{
+    public static IDictionary<string, DateTime> time = new Dictionary<string, DateTime>() { {"time", DateTime.Now} };
+
+    public string hours;
+    public string minutes;
+    public string seconds;
+    public string milliseconds;
+
+    public void Success()
     {
-        static void Main(string[] args)
-        {
-            //not 100% sure if this is needed, could probably just use a method instead of a constructor
-            var postApi = new postApi();
-            //store the data in a constructor (at least thats what I think its called I dunno its late)
-            string secret_key = File.ReadAllText(@"G:\comp sci 12\webapi test\api.txt");
-            Console.WriteLine("Please enter a prompt");
-            string prompt = Console.ReadLine();
-            var data = new Data { api_key = secret_key, prompt = $"{prompt}", gemini = true };
+        DateTime end = DateTime.Now;
+        TimeSpan elapsedTime = end - time["time"];
+        //clear the console
+        Console.Clear();
 
-            //api endpoint
-            var url = "https://something-lfu0.onrender.com";
-            //execute the thing that does the post request
-            var task = postApi.SendData(url, data);
-            //set the data in a variable
-            var response = task.Result;
+        //remove the decimal values from the time values and format them for use later
+        milliseconds = elapsedTime.TotalMilliseconds.ToString();
+        milliseconds = milliseconds.Substring(0, milliseconds.IndexOf(".") + 1).TrimEnd('.');
 
-            Console.WriteLine(response);
-            //print to console what the output was
+        //this will convert miliseconds to hours, minutes and seconds repesctivily 
+        long hours = Convert.ToInt64(milliseconds) / 3600000;
+        long minutes = (Convert.ToInt64(milliseconds) % 3600000) / 60000;
+        long seconds = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) / 1000;
+        long milisecs = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) % 1000;
 
-        }
+        Console.WriteLine($@"**Congratulations!!!**
+You have successfully completed all of the challenges and have escaped the escape room.
+
+It took you:
+{hours} hours
+{minutes} minutes
+{seconds} seconds 
+and 
+{milisecs} miliseconds
+
+to complete all of the challenges.
+");
     }
+    public void Failure(string challenge)
+    {
+        DateTime end = DateTime.Now;
+        TimeSpan elapsedTime = end - time["time"];
+        //clear the console
+        Console.Clear();
+
+        //remove the decimal values from the time values and format them for use later
+        milliseconds = elapsedTime.TotalMilliseconds.ToString();
+        milliseconds = milliseconds.Substring(0, milliseconds.IndexOf(".") + 1).TrimEnd('.');
+
+        //this will convert 
+        long hours = Convert.ToInt64(milliseconds) / 3600000 ;
+        long minutes = (Convert.ToInt64(milliseconds) % 3600000) / 60000;
+        long seconds = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) / 1000;
+        long milisecs = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) % 1000;
+
+        //print to console how long the user spent trying
+        Console.WriteLine("You failed to escape. You made it up to " + challenge + " and you spent " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds and " + milisecs + " Milliseconds inside of the escape room");
+    }
+    public static void Main(string[] args)
+    {
+        var ai = new api.Ai();
+        //Console.WriteLine("temp just beacuse don't want to waste api requests");
+        Console.WriteLine("If this program seems to be stuck here close an restart, press any key to continue \n");
+        Console.ReadKey();
+        Console.Clear();
+        Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
+        Console.WriteLine();
+        //wait for the user to press enter before continuing
+        Console.ReadKey();
+
+        //start the timer
+        DateTime start = DateTime.Now;
+        time["time"] = start;
+
+        //execute the first challenge
+        var challenge = new Challenges.Challenge_1();
+        challenge.Challenge1();
+
+    }
+}

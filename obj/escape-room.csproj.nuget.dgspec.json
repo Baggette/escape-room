@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "G:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj": {}
+    "E:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj": {}
   },
   "projects": {
-    "G:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj": {
+    "E:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj",
+        "projectUniqueName": "E:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj",
         "projectName": "escape-room",
-        "projectPath": "G:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj",
-        "packagesPath": "D:\\Users\\rishis.TVH0139791\\.nuget\\packages\\",
-        "outputPath": "G:\\comp sci 12\\Escape Room\\escape-room\\obj\\",
+        "projectPath": "E:\\comp sci 12\\Escape Room\\escape-room\\escape-room.csproj",
+        "packagesPath": "C:\\Users\\Baggette\\.nuget\\packages\\",
+        "outputPath": "E:\\comp sci 12\\Escape Room\\escape-room\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "D:\\Users\\rishis.TVH0139791\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Baggette\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +27,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -65,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
