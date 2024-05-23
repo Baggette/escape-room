@@ -36,8 +36,9 @@ namespace escape_room.Challenges
             string path = file.writeToFileAndHash(RandomString(), filename);
 
             string hash = Encode(path);
-
-            Console.WriteLine(@$"**Challenge 4:**
+            try
+            {
+                Console.WriteLine(@$"**Challenge 4:**
 
 This is the 4th and final challenge of this escape room, to win you must locate the file that was randomly placed 
 in a folder on your computer, you must then hash said file and return the hash here
@@ -45,6 +46,18 @@ in a folder on your computer, you must then hash said file and return the hash h
 {hash.Remove(hash.Length - 25)}
 
 Happy trails");
+            }
+            catch (System.ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine(@$"**Challenge 4:**
+
+This is the 4th and final challenge of this escape room, to win you must locate the file that was randomly placed 
+in a folder on your computer, you must then hash said file and return the hash here
+
+{hash.Remove(hash.Length - 10)}
+
+Happy trails");
+            }
 
             string md5 = file.HashFile(path + $"/{filename}.txt");
 

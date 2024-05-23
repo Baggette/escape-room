@@ -69,7 +69,7 @@ to complete all of the challenges.
         Console.WriteLine("If this program seems to be stuck here close an restart, press any key to continue \n");
         Console.ReadKey();
         Console.Clear();
-        Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
+       // Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
         Console.WriteLine();
         //wait for the user to press enter before continuing
         Console.ReadKey();
@@ -79,8 +79,8 @@ to complete all of the challenges.
         time["time"] = start;
 
         //execute the first challenge
-        var challenge = new Challenges.Challenge_1();
-        challenge.Challenge1();
+        var challenge = new Challenges.Challenge_4();
+        challenge.Challenge4();
 
     }
 }
