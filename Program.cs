@@ -12,6 +12,36 @@ public class Program
     public string seconds;
     public string milliseconds;
 
+    public void Success()
+    {
+        DateTime end = DateTime.Now;
+        TimeSpan elapsedTime = end - time["time"];
+        //clear the console
+        Console.Clear();
+
+        //remove the decimal values from the time values and format them for use later
+        milliseconds = elapsedTime.TotalMilliseconds.ToString();
+        milliseconds = milliseconds.Substring(0, milliseconds.IndexOf(".") + 1).TrimEnd('.');
+
+        //this will convert miliseconds to hours, minutes and seconds repesctivily 
+        long hours = Convert.ToInt64(milliseconds) / 3600000;
+        long minutes = (Convert.ToInt64(milliseconds) % 3600000) / 60000;
+        long seconds = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) / 1000;
+        long milisecs = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) % 1000;
+
+        Console.WriteLine($@"**Congratulations!!!**
+You have successfully completed all of the challenges and have escaped the escape room.
+
+It took you:
+{hours} hours
+{minutes} minutes
+{seconds} seconds 
+and 
+{milisecs} miliseconds
+
+to complete all of the challenges.
+");
+    }
     public void Failure(string challenge)
     {
         DateTime end = DateTime.Now;
@@ -20,34 +50,37 @@ public class Program
         Console.Clear();
 
         //remove the decimal values from the time values and format them for use later
-        hours = elapsedTime.TotalHours.ToString();
-        hours = hours.Substring(0, hours.IndexOf(".") + 1).TrimEnd('.');
-        minutes = elapsedTime.TotalMinutes.ToString();
-        minutes = minutes.Substring(0, minutes.IndexOf(".") + 1).TrimEnd('.');
-        seconds = elapsedTime.TotalSeconds.ToString();
-        seconds = seconds.Substring(0, seconds.IndexOf(".") + 1).TrimEnd('.');
         milliseconds = elapsedTime.TotalMilliseconds.ToString();
         milliseconds = milliseconds.Substring(0, milliseconds.IndexOf(".") + 1).TrimEnd('.');
 
+        //this will convert 
+        long hours = Convert.ToInt64(milliseconds) / 3600000 ;
+        long minutes = (Convert.ToInt64(milliseconds) % 3600000) / 60000;
+        long seconds = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) / 1000;
+        long milisecs = ((Convert.ToInt64(milliseconds) % 3600000) % 60000) % 1000;
+
         //print to console how long the user spent trying
-        Console.WriteLine("You failed to escape. You made it up to " + challenge + " and you spent " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds and " + milliseconds + " Milliseconds inside of the escape room");
+        Console.WriteLine("You failed to escape. You made it up to " + challenge + " and you spent " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds and " + milisecs + " Milliseconds inside of the escape room");
     }
     public static void Main(string[] args)
     {
-        //var ai = new api.Ai();
+        var ai = new api.Ai();
         //Console.WriteLine("temp just beacuse don't want to waste api requests");
-        //Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
+        Console.WriteLine("If this program seems to be stuck here close an restart, press any key to continue \n");
+        Console.ReadKey();
+        Console.Clear();
+        Console.WriteLine(ai.Prompt("Generate a cool name for an escape room and welcome the user to it, do not use the word enigma, keep it short just a basic welcome, ensure you made up a name for the escape room and tell the user to press enter to continue"));
         Console.WriteLine();
         //wait for the user to press enter before continuing
-        //Console.ReadKey();
+        Console.ReadKey();
 
         //start the timer
         DateTime start = DateTime.Now;
         time["time"] = start;
 
-        var challenge = new Challenges.Challenge_3();
-        challenge.Challenge3();
-        //print to console what the output was
+        //execute the first challenge
+        var challenge = new Challenges.Challenge_1();
+        challenge.Challenge1();
 
     }
 }

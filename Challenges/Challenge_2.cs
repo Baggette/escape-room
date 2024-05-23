@@ -11,10 +11,13 @@ namespace escape_room.Challenges
         public void Challenge2() 
         {
             Console.Clear();
-            Console.WriteLine("FVB OHCL MVBUK AOL HUZDLY");
-            Console.WriteLine();
-            Console.WriteLine("The answer to your question is what is a commonly used salad dressing and what is 72 divided by 10.28571428571429.");
-            Console.WriteLine();
+
+            Console.WriteLine($@"**Challenge 2:**
+FVB OHCL MVBUK AOL HUZDLY
+
+The answer to your question is what is a commonly used salad dressing and what is 72 divided by 10.28571428571429.
+
+");
 
             string answer;
             int times = 0;
@@ -27,8 +30,9 @@ namespace escape_room.Challenges
                 answer = Console.ReadLine();
                 times++;
                 Program failed = new Program();
+                var challenge = new Challenges.Challenge_3();
                 if (times >= 4) failed.Failure("Challenge 2");
-                if (answer.ToLower() == "you have found the answer") failed.Failure("This is temp will link to corresponding challenge after this one");
+                if (answer.ToLower() == "you have found the answer") challenge.Challenge3();
             } while (answer.ToLower() != "you have found the answer");
         }
     }

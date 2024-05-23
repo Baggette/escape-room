@@ -11,6 +11,9 @@ namespace escape_room.Challenges
     {
         public void Challenge3() 
         {
+
+            Console.Clear();
+
             var getTrivia = new api.Api();
             var task = getTrivia.trivia();
 
@@ -32,17 +35,25 @@ Please enter the letter next to the correct answer or the correct answer itself.
 
             string answer = Console.ReadLine().ToLower();
 
+            var challenge = new Challenges.Challenge_4();
+
             if (answer == "c")
             {
-                Console.WriteLine("yay its right");
+                Console.WriteLine("You may proceed");
+                Thread.Sleep(1000);
+                challenge.Challenge4();
+
             }
             else if (answer == correct_answer.ToLower())
             {
-                Console.WriteLine("yay its right");
+                Console.WriteLine("You may proceed");
+                Thread.Sleep(1000);
+                challenge.Challenge4();
             }
             else 
             {
-                Console.WriteLine("nuh uhh wrong ");
+                var failed = new Program();
+                failed.Failure("Challenge 3");
             }
 
         }

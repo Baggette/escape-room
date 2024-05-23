@@ -11,7 +11,7 @@ namespace escape_room.api
                 //not 100% sure if this is needed, could probably just use a method instead of a constructor
                 var postApi = new Api();
                 //store the data in a constructor (at least thats what I think its called I dunno its late)
-                string secret_key = File.ReadAllText(@"..\..\..\..\..\..\api.txt");
+                string secret_key = File.ReadAllText(@".\api.txt");
 
                 var data = new Data { api_key = secret_key, prompt = $"{prompt}", gemini = true };
 
