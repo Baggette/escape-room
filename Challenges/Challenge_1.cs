@@ -30,7 +30,14 @@ Write a program in a language of your choice that takes user input in minutes an
             //when the user drags a file into the console window it adds some extra quotations for some reason so this just removes that 
             try
             {
-                code = File.ReadAllText(@path.Substring(1, path.Length - 2).TrimEnd('"'));
+                try
+                {
+                    code = File.ReadAllText(@path.Substring(1, path.Length - 2).TrimEnd('"'));
+                }
+                catch (System.IO.IOException e)
+                {
+                    code = File.ReadAllText(path.Substring(0, path.Length).TrimEnd('"'));
+                }
             }
             catch (Exception ex)
             {
